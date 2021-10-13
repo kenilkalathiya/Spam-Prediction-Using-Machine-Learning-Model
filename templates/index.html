@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+{% extends './comman.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}Spam Predictor{% endblock %}
+    </title>
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+    {% endblock %}
+    <!-- <link rel="stylesheet" type="text/css" href="./css/style.css"> -->
+    {% block js %}
+    <script src="{% static 'js/index.js' %}"></script>
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+    <div class="scrollTop" onclick="Top()"></div>
+
+    <div class="discription">
+        <div class="left">
+            <div class="project_title">
+                <h2>About Project</h2>
+                <div class="p_t1"></div>
+            </div>
+            <h4>Hello {% if request.user.is_authenticated %} 
+                {{ request.user.username }}
+                {% else %}
+                Users
+                {% endif %}
+                ,</h4>
+            <div class="aboutProject">
+                <p>Here, we present one project about social media which is very common thing in teenagers nowadays. 
+                    But in that there are many bad things done by some pepole. So, for these We present this project in front of you guys. 
+                    So, you can check that kind of things and remove frome your social media account.
+                </p>
+                <p class="middleLine">
+                    Check our project with click on project button given in top of Website.
+                </p>
+                <p class="lastLine">
+                    We hope you will enjoy to use our project.
+                </p>
+            </div>
+        </div>
+
+        <div class="right">
+            <img src="{% static 'images/spam.png' %}" alt="">
+        </div>
+    </div>
+    
+    <div class="section2">
+        <hr class="line">
+    </div>
+
+    <main id="project">
+    <div class="container">
+        <div class="project">
+            <div class="pro1">
+                <h2>01</h2>
+                <h3>Fake News</h3>
+                <p>This tool can detect Fake news using Machin learning 
+                    algorithm. We are using naive baiese algorithm to detect 
+                    fake news.
+                </p>
+                <a href="fake-news-detection">Goto Page</a>
+            </div>
+        </div>
+        <div class="project">
+            <div class="pro1">
+                <h2>02</h2>
+                <h3>Spam Mail Detatction</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Delectus voluptas quis necessitatibus non, hic natus, 
+                    nostrum sint molestiae  error?
+                </p>
+                <a href="#1">Goto Page</a>
+            </div>
+        </div>
+        <div class="project">
+            <div class="pro1">
+                <h2>03</h2>
+                <h3>Toxic Comment</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Delectus voluptas quis necessitatibus non, hic natus, 
+                    nostrum sint molestiae error?
+                </p>
+                <a href="#1">Goto Page</a>
+            </div>
+        </div>
+    </div>
+    </main>
+    <div class="section2">
+        <hr class="line">
+    </div>
+    <div class="aboutUs" id="projectMemeber">
+        <h3>Project Members</h3>
+        <div class="manager">
+            <div class="m1">
+                <img src="{% static 'images/kenil1.jpg' %}" class="center" width="100px" height="100px">
+                <p>Kenil Kalathiya</p>
+                <p id="role">Front-end Developer</p>
+                <div class="social">
+                    <a href="https://www.instagram.com/kenil_kalathiya_007" target="_blank"><img width="25px"src="{% static 'images/instagram.png' %}"></img></a>
+                    <a href="https://github.com/kenilkalathiya" target="_blank"><img width="25px"src="{% static 'images/github.png' %}"></img></a>
+                    <a href="https://www.linkedin.com/in/kenil-kalathiya-9422021b6/" target="_blank"><img width="25px"src="{% static 'images/linkedin.png' %}"></img></a>
+                </div>
+            </div>
+            <div class="m1">
+                <img src="{% static 'images/krishnan2.j' %}pg" class="center" width="100px" height="100px">
+                <p>Krishnan Navdia</p>
+                <p id="role">Algorithm Developer</p>
+                <div class="social">
+                    <a href="https://www.instagram.com/krishnan_navadia/" target="_blank"><img width="25px"src="{% static 'images/instagram.png' %}"></img></a>
+                    <a href="https://github.com/krishnan-tech" target="_blank"><img width="25px"src="{% static 'images/github.png' %}"></img></a>
+                    <a href="https://www.linkedin.com/in/krishnan-navadia/" target="_blank"><img width="25px"src="{% static 'images/linkedin.png' %}"></img></a>
+                </div>
+            </div>
+            <div class="m1">
+                <img src="{% static 'images/darshan.heic' %}" class="center" width="100px" height="100px">
+                <p>Darshan Darji</p>
+                <p id="role">Back-end Developer</p>
+                <div class="social">
+                    <a href="https://www.instagram.com/the_dsd/" target="_blank"><img width="25px"src="{% static 'images/instagram.png' %}"></img></a>
+                    <a href="https://github.com/Darshan-SD" target="_blank"><img width="25px"src="{% static 'images/github.png' %}"></img></a>
+                    <a href="https://www.linkedin.com/in/darshan-darji-ba41121a6/" target="_blank"><img width="25px" src="{% static 'images/linkedin.png' %}"></img></a>
+                </div>
+            </div>
+            <div class="m1">
+                <img src="{% static 'images/krupang.jpg' %}" class="center" width="100px" height="100px">
+                <p>Krupang Buddhdev</p>
+                <p id="role">Front-end Designer</p>
+                <div class="social">
+                    <a href="https://www.instagram.com/krupang_n_buddhdev" target="_blank"><img width="25px"src="{% static 'images/instagram.png' %}"></img></a>
+                    <a href="https://github.com/krupangbuddhdev#:~:text=Skip%20to%20content-,krupangbuddhdev,-Set%20status" target="_blank"><img width="25px"src="{% static 'images/github.png' %}"></img></a>
+                    <a href="https://www.linkedin.com/in/krupang-buddhdev-2242a4185/" target="_blank"><img width="25px" src="{% static 'images/linkedin.png' %}"></img></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section2">
+        <hr class="line">
+    </div>
+
+    <div class="last">
+        <footer class="c-footer"> Copyright &copy 2021 | All rights reserved by <a href="#projectMemeber">Team Fantastic 4 </a></footer>
+    </div>
+    {% endblock %}
+</body>
+</html>

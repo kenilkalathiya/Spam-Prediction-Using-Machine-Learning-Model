@@ -1,0 +1,165 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s ease;
+}
+
+body{
+    background: linear-gradient(to right top, #fd816e 5% , #7961F6 50% );
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+}
+
+
+
+
+.container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.project{
+    width: 100%;
+    height: 200px;
+    justify-content: space-around;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+h2{
+    margin-top: 40px;
+    font-size: 40px;
+    justify-content: center;
+    text-align: center;
+}
+
+.search{
+    position: relative;
+    width: 50%;
+    height: 50px;
+}
+
+.search input{
+    position: relative;
+    /* margin-top: 40px; */
+    width: 100%;
+    height: 100%;
+	background: rgba(255, 255, 255, 0.2);
+	border: none;
+	outline: none;
+    box-sizing: border-box;
+	padding: 8px 16px;
+	border-radius: 35px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: black;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.search img{
+    position: absolute;
+    right: 14px;
+    top: 8px;
+    align-self: center;
+}
+
+.ans-div{
+    padding-top: 20px;
+}
+
+.project button{
+        margin-top: 30px;
+        width: 10%;
+        background: white;
+        font-weight: 500;
+        justify-content: center;
+        align-items: center;
+        border: none;
+        outline: none;
+        padding: 8px 16px;
+        border-radius: 35px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: black;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+
+}
+
+
+/* .btn{
+    margin-left: 20px;
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border: 1px solid rgb(136, 247, 136);
+    border-radius: 7px;
+    letter-spacing: 1px;
+    background-color: transparent;
+    color: rgb(136, 247, 136);
+    cursor: pointer;
+}
+
+.btn:hover{
+    background-color:rgb(136, 247, 136) ;
+    color: black;
+    
+} */
+
+.project button:hover{
+    cursor: pointer;
+	background: black;
+	color: white;
+}
+
+@media only screen and (max-width: 1028px) {
+    .navbar{
+        height: 80px;
+    }
+
+    .title{
+        width: 25%;
+        padding-top: 21px;
+    }
+
+    .project input{
+        padding: 13px 35px;
+    }
+}
+
+
+@media only screen and (max-width: 860px) {
+    .navbar{
+        height: 70px;
+    }
+
+    .title{
+        width: 30%;
+        padding-top: 18px;
+    }
+
+    .project input{
+        padding: 13px 35px;
+    }
+
+    .project button{
+        width: 13%;
+    }
+}

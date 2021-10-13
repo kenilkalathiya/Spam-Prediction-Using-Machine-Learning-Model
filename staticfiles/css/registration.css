@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+main{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	background: linear-gradient(to right top, #fd816e 5% , #7961F6 50% );
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	font-family: sans-serif;
+	height: 100vh;
+}
+
+.pw-con{
+	position: relative;
+	display: flex;
+	flex-direction: row;
+}
+
+.material-icons{
+	position: absolute;
+	right: 200px;
+	align-self: center;
+	cursor: pointer;
+  }
+
+.registration{
+	background:linear-gradient(to right bottom, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.25));
+	color: black;
+	margin: 20px;
+	position: absolute;
+	box-sizing: border-box;
+	padding: 20px;
+	padding-top: 0;
+	border-radius: 15px;
+	backdrop-filter: blur(10px);
+	box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.form{
+	position: relative;
+	/* width: 100%; */
+	/* height: 100%; */
+	padding: 10px;
+}
+h1{
+	position: relative;
+	color: black;
+	font-size: 28px;
+	font-weight: 700;
+	letter-spacing: 1px;
+	margin-top:15px;
+	margin-bottom:37px;
+}
+
+h1::before{
+	content: '';
+	position: absolute;
+	left: 0;
+	bottom: -10px;
+	width: 120px;
+	height: 4px;
+	background: black;
+}
+
+.inputbox{
+	width: 100%;
+	margin-top: 12px;
+}
+
+.inputbox p{
+	margin-left: 10px;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.inputbox input{
+	width: 60%;
+	background: rgba(255, 255, 255, 0.2);
+	border: none;
+	outline: none;
+	padding: 6px 16px;
+	border-radius: 35px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: black;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.inputbox button{
+	width: 100%;
+	background: white;
+	font-weight: 700;
+	border: none;
+	outline: none;
+	padding: 8px 16px;
+	border-radius: 35px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: black;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	margin-bottom: 10px;
+	transition: all 0.1s linear;
+}
+
+.inputbox button:hover{
+	cursor: pointer;
+	background: black;
+	color: white;
+}
+
+.inputbox1{
+	display: flex;
+	width: 100%;
+}
+
+.inputbox1 input{
+    display: flex;
+    color: white;
+    max-width: 100%;
+    margin: auto;
+	width: 100%;
+	background: rgba(255, 255, 255, 0.2);
+	border: none;
+	outline: none;
+	padding: 6px 16px;
+	border-radius: 35px;
+	border: 1px solid rgba(255, 255, 255, 0.5);
+	border-right: 1px solid rgba(255, 255, 255, 0.2);
+	border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+	font-size: 16px;
+	letter-spacing: 1px;
+	color: black;
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.first{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+	float: left;
+	color: black;
+}
+
+.first p, .last p{
+	margin-left: 3%;
+	font-size: 18px;
+	font-weight: 600;
+}
+
+.last{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+	padding-left: 9%;
+	color: black;
+}
+
+.first, .last{
+	margin-top: 12px;
+}
+
+.inputbox input[type=checkbox]{
+	width: 9%;
+	font-size: 10px;
+	letter-spacing: 1px;
+	color: black;
+}
+
+.extra{
+	font-weight: 600;
+}
+
+.alert{
+    color: red;
+}
+
+.extra{
+	margin: 5px 0;
+}
+
+@media only screen and (max-width: 800px){
+	.inputbox input{
+		width: 100%;
+	}
+	.material-icons{
+		right: 11px;
+	}
+}
+
+@media only screen and (max-width: 600px){
+
+	.navbar a{
+		font-size: 27px;
+	}
+
+	.registration{
+		width: 85%;
+		padding: 15px;
+		padding-top: 0;
+	}
+
+	.inputbox1{
+		/* margin-left: 18px; */
+		flex-direction: column;
+	}
+
+	/* .inputbox{
+		margin: 18px;
+	} */
+
+	.last{
+		padding: 0;
+	}
+
+	.first p, .last p{
+		margin-left: 10px;
+	}
+
+
+	.inputbox button{
+		width: 100%;
+	}
+
+	.extra{
+		margin-left: 18px;
+	}
+
+	.inputbox input, .inputbox1 > div{
+		width: 100%;
+	}
+
+}

@@ -1,0 +1,389 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital@1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background: linear-gradient(to right top, #fd816e 5% , #7961F6 50% );
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+    -ms-overflow-style: none;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.section2{
+    /* width: 90%; */
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+
+
+.scrollTop{
+    position: fixed;
+    bottom: 800px;
+    right: 30px;
+    width: 32px;
+    height: 32px;
+    background-image : url(../Image/up-arrow.png);
+    background-size: cover;
+    border-radius: 50%;
+    z-index: 4;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.scrollTop.active{
+    bottom: 20px;
+    visibility: visible;
+    opacity: 1;
+}
+
+.discription{
+    height: 100vh;
+    display: flex;
+}
+
+.left{
+    width: 50%;
+    padding-left: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.project_title{
+    text-shadow: 3px 3px 10px black;
+    width: 70%;
+}
+
+.project_title h2{
+    color: rgba(255, 255, 255, 0.8);
+    /* opacity: 0.5; */
+    margin-top: 10px;
+    font-size: 50px;
+    margin: 15px;
+    font-weight: 600;
+    /* border-bottom: 3px solid black; */
+}
+
+.project_title .p_t1{
+    width: 40%;
+    margin-top: -15px;
+    margin-left: 15px;
+    border-top: 3px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 3px 3px 10px 1px black;
+}
+
+.left h4{
+    margin-top: 10px;
+    font-size: 25px;
+    margin: 15px;
+    font-weight: 500;
+}
+
+.left p{
+    margin: 15px;
+    font-size: 20px;
+    line-height: 35px;
+    font-weight: 400;
+    text-align: justify;
+}
+
+.middleLine{
+    margin-top: 35px;
+}
+
+.lastLine{
+    margin-top: 35px;
+}
+
+.right{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.right img{
+    width: 90%;
+    opacity: 0.7;
+}
+
+main{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    z-index: 1;
+}
+
+.project{
+    height: 400px;
+    margin: 20px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.pro1{
+    padding: 20px;
+    text-align: center;
+    transform: translateY(70px);
+    opacity: 0.5;
+    transition: 0.5s;
+}
+
+.pro1:hover{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.pro1 h2{
+    position: absolute;
+    top: -100px;
+    right: 30px;
+    font-size: 7em;
+    color: rgba(255, 255, 255, 0.3);
+    pointer-events: none;
+}
+
+.pro1 h3{
+    font-size: 1.55em;
+    color: black;
+    z-index: 1;
+
+}
+
+.pro1 p{
+    font-size: 1em;
+    color: black;
+    font-weight: 300;
+    pointer-events: none;
+}
+
+.pro1 a{
+    position: relative;
+    display: inline-block;
+    padding: 8px  20px;
+    margin-top: 15px;
+    text-decoration: none;
+    background: white;
+    color: black;
+    font-weight: 500;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+}
+
+.pro1 a:hover{
+    background: black;
+    color: white;
+}
+
+.aboutUs{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.aboutUs h3{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: 700;
+    border-bottom: 4px solid black;
+}
+
+
+.manager{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr; */
+    /* flex-direction: row; */
+    justify-items: center;
+    align-items: center;
+}
+
+.m1{
+    width: 250px;
+    height: 300px;
+    margin: 20px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+}
+
+.center{
+    margin-top: 10px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.m1 p{
+    padding-top: 10px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#role{
+    font-size: 16px;
+}
+
+.social{
+    padding-top: 35%;
+} 
+
+.social a{
+    margin: 10px;
+    opacity: 0.8;
+}
+
+.social a:hover{
+    opacity: 1;
+}
+
+.last{
+    margin-bottom: 30px;
+    font-weight: 400;
+}
+
+.last a{
+    text-decoration: none;
+    color: #f76049;
+}
+
+.c-footer{
+    margin-top: 15px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* ------------------------ 
+ Responsive 
+------------------------ */
+
+@media only screen and (max-width: 885px){
+
+    .title{
+        padding-left: 10px;
+        width: 40%;
+        font-size: 27px;
+        cursor: pointer;
+    }
+    
+    .nav-list{
+        width: 70%;
+        display: flex;
+        
+    }
+
+
+    .project_title{
+        width: 70%;
+    }
+
+    .project_title h2{
+        margin-top: 10px;
+        font-size: 40px;
+        margin: 10px;
+    }
+
+    .left h4{
+        margin-top: 10px;
+        font-size: 20px;
+    }
+    
+    .left p{
+        margin: 10px;
+        font-size: 17px;
+        line-height: 33px;
+    }
+    
+    .project_title .p_t1{
+        width: 50%;
+        margin-top: -15px;
+        margin-left: 15px;
+        border-top: 3px solid rgba(255, 255, 255, 0.7);
+    }
+
+    .pro1{
+        height: 450px;
+        padding: 20px;
+        text-align: center;
+        opacity: 1;
+    }
+
+    .pro1 h2{
+        position: absolute;
+        top: -50px;
+        right: 30px;
+        font-size: 5em;
+    }
+
+
+    
+    .pro1 h3{
+        font-size: 1.4em;
+        z-index: 1;
+    
+    }
+
+
+    
+}
+
+@media only screen and (max-width: 400px){
+    .manager{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+}

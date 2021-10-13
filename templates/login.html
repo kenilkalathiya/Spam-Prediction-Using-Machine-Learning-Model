@@ -1,0 +1,75 @@
+{% extends './comman.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		{% block title %}Login Page{% endblock %}
+	</title>
+	{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	{% endblock %}
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	{% block body %}
+	<section>
+		<!-- <div class="box"></div>
+		<div class="box"></div> -->
+		<div class="container">
+			<div class="loginbox">
+				<img src="{% static 'images/profile.png' %}" class="center" width="100px" height="100px">
+				<h1>Login Here</h1>
+				<div class="alert">
+					{% for msg in messages %}
+					<p><i>{{ msg }}</i></p>
+					{% endfor %}
+				</div>
+				<form method="post">
+					{% csrf_token %}
+
+					<div class="inputbox">
+						<p>Username</p>
+						<input type="text" name="username" placeholder="Enter Username" id="username">
+					</div>
+
+					<div class="inputbox">
+						<p>Password</p>
+						<div class="pass-con">
+							<input type="Password" name="password" placeholder="Enter Password" id="password">
+							<span id="togglePassword" class="material-icons togglePw">
+								visibility_off
+							</span>
+						</div>
+					</div>
+					<div class="inputbox">
+						<button type="submit" id="loginBtn">Login</button>
+					</div>
+					<br>
+					<!-- <div class="extra">
+							<p class="para">Forgot Password? <a class="link" href="password.html"style="color:white">Click Here</a></p>
+						</div> -->
+					<div class="extra">
+						<p class="para">Don't have an account? <a class="link" href="/signup/"
+								style="color:white">Register Here</a></p>
+					</div>
+
+				</form>
+			</div>
+		</div>
+	</section>
+	{% endblock %}
+</body>
+
+{% block js %}
+<script>
+	
+</script>
+
+<script src="{% static './js/login.js' %}"></script>
+{% endblock %}
+
+</html>

@@ -1,0 +1,116 @@
+{% extends './comman.html' %}
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>
+		{% block title %}Registration Form{% endblock %}
+	</title>
+
+	{% block css %}
+	<link rel="stylesheet" type="text/css" href="{% static 'css/registration.css' %}">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	{% endblock %}
+
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+	{% block body %}
+	<main>
+		<div class="registration">
+			<h1>Sign Up</h1>
+			<!--		<form method="post" action="">-->
+			<!--			{% csrf_token %}-->
+			<!--			{{ form }}-->
+			<!--			<input type="submit" value="Submit">-->
+			<!--		</form>-->
+			<form action="" method="post">
+				{% csrf_token %}
+				<div class="inputbox1">
+					<div class="first">
+						<p>First Name</p>
+						<!--					<input type="text" name="" placeholder="Enter First name">-->
+						{{ form.first_name }}
+					</div>
+					<div class="last">
+						<p>Last Name</p>
+						{{ form.last_name }}
+						<!--					<input type="text" name="" placeholder="Enter Last name">-->
+					</div>
+				</div>
+				<div class="inputbox">
+					<p>Username</p>
+					{{ form.username }}
+					<!--				<input type="text" name="" placeholder="Create Username">-->
+				</div>
+				<div class="inputbox">
+					<p>E-mail</p>
+					{{ form.email }}
+					<!--				<input type="email" name="" placeholder="Enter E-mail">-->
+				</div>
+				<div class="inputbox">
+					<p>Create Password</p>
+					<div class="pw-con">
+						{{ form.password1 }}
+						<span id="regsPassword" class="material-icons">
+							visibility_off
+						</span>
+					</div>
+					<!--				<input type="password" name="" placeholder="Enter Password">-->
+				</div>
+				<div class="inputbox">
+					<p>Confirm Password</p>
+					<div class="pw-con">
+						{{ form.password2 }}
+						<span id="regsPassword2" class="material-icons">
+							visibility_off
+						</span>
+					</div>
+					<!--				<input type="password" name="" placeholder="Confirm Password">-->
+				</div><br>
+				<div class="extra">
+					<p><input type="checkbox" name="" required>
+						I accept the terms and Condition</p>
+				</div>
+				{% for msg in messages %}
+				<p><i>{{ msg }}</i></p>
+				{% endfor %}
+
+				{% if form.errors %}
+				{% for field in form %}
+				{% for error in field.errors %}
+				<div class="alert">
+					<strong>{{ error|escape }}</strong>
+				</div>
+				{% endfor %}
+				{% endfor %}
+				{% for error in form.non_field_errors %}
+				<div class="alert alert-danger">
+					<strong>{{ error|escape }}</strong>
+				</div>
+				{% endfor %}
+				{% endif %}
+
+				<div class="extra">
+					<p class="para" style="font-weight:normal;">Already have an account? <a class="link" href="/login/"
+							style="color:white">Login Here</a></p>
+				</div>
+
+				<div class="inputbox">
+					<button type="submit">Sign Up</button>
+				</div>
+
+			</form>
+
+		</div>
+	</main>
+	{% endblock %}
+</body>
+
+{% block js %}
+<script src="{% static 'js/registration.js' %}"></script>
+{% endblock %}
+
+</html>

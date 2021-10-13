@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% extends './comman.html' %}
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        {% block title %}Fake News{% endblock %}
+    </title>
+
+    {% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/fakeNews.css' %}">
+    {% endblock %}
+</head>
+<body>
+    {% block body %}
+    <main>
+        <h2>Detect Fake news</h2>
+        <div class="container">
+            <form method="post" action="/fake-news-detection/" class="project">
+                {% csrf_token %}
+                <div class="search">
+                    <input type="text" name="user-input" placeholder="Search your news here">
+                    <img src="{% static 'images/search-icon.png' %}">
+                </div>
+                {% if ans %}
+                <div class="ans-div">
+                    Entered news is {{ ans }}
+                </div>
+                {% endif %}
+                <button id="search">Search</button>
+            </form>
+        </div>
+    </main>
+    {% endblock %}
+</body>
+</html>

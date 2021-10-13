@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
+    {% block css %}
+    {% endblock %}
+    <title>
+        {% block title %}Navbar{% endblock %}
+    </title>
+    {% block js %}
+    {% endblock %}
+</head>
+<body>
+    <nav class="navbar background">
+        <div class="title"><i><a href="/">Spam Predictor</a></i></div>
+        <ul class="nav-list">
+            {% if home %}
+            <li><a href="#home" onclick="Top()"><b>Home</b></a></li>
+            <li><a href="#project"><b>Projects</b></a></li>
+            <li><a href="#projectMemeber"><b>About Us</b></a></li>
+            {% else %}
+            {% endif %}
+        </ul>
+        <div class="rightnav">
+            {% if btns %}
+
+            {% if request.user.is_authenticated %}
+            <span class="user-welcome">Hi, {{ request.user.first_name }} {{ request.user.last_name }}</span>
+            <button class="btn" onclick="window.location.href = '/logout' ;">Logout</button>
+            {% else %}
+            <button class="btn" onclick="window.location.href = '/login' ;">LogIn</button>
+            <button class="btn" onclick="window.location.href = '/signup' ;">SignUp</button>
+            {% endif %}
+
+            {% else %}
+            {% endif %}
+        </div>
+    </nav>
+    {% block body %}
+    {% endblock %}
+</body>
+</html>
+
